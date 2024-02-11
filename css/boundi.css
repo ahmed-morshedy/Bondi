@@ -1,0 +1,122 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.navbar {
+  background-color: var(--dark-color);
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: #fff;
+        padding: 0.5rem 1rem;
+        &:hover,
+        &.active,
+        &:focus {
+          color: var(--green-color);
+        }
+      }
+    }
+  }
+  .search {
+    border-left: 1px solid var(--green-color);
+    svg {
+      color: var(--green-color);
+    }
+  }
+  .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 80px);
+}
+
+.main-title::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features {
+  .icon-holder {
+    height: 200px;
+    svg {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .icon {
+      color: var(--green-color);
+    }
+    .number {
+      color: var(--section-color);
+      font-size: 12rem;
+    }
+  }
+  h4 {
+    color: var(--yellow-color);
+  }
+}
+
+.our-work {
+  background-color: var(--section-color);
+  li {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    &:not(.btn-primary):hover {
+      color: #0d6efd;
+    }
+  }
+  .work {
+    border: 4px solid white;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::after {
+      content: attr(data-work);
+      color: white;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100%);
+      height: calc(100%);
+      background-color: rgb(51 209 204 / 76%);
+      transition: 0.5s;
+      transform: translateX(100%);
+    }
+    &:hover::after {
+      transform: translateX(0);
+      border-color: var(--red-color);
+    }
+  }
+}
