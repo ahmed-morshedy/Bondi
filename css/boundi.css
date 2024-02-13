@@ -190,3 +190,14 @@ body {
     color: var(--yellow-color);
   }
 }
+
+footer {
+  background-color: var(--dark-color);
+  .special {
+    color: var(--green-color);
+  }
+  .social {
+    color: white;
+    cursor: pointer;
+  }
+}

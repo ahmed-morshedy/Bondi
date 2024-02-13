@@ -64,3 +64,6 @@ but.addEventListener("click", () => {
     }
   });
 });
+
+const date = (document.querySelector(".date").innerHTML =
+  new Date().getFullYear());
